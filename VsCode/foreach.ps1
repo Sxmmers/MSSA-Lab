@@ -12,3 +12,10 @@ foreach($name in $folderNames){
     }
 }
 
+$folderNames | ForEach-Object -Process{
+        if((Test-Path -Path "$foldersPath\$_") -eq $false){
+        New-Item -Path "$foldersPath" -Name $_ -ItemType Directory
+    }else{
+        Write-Output "Folder exists"
+    }
+}
