@@ -1,0 +1,77 @@
+Server Core Basics
+#####################################
+sconfig #Open server configuration
+hostname # Shows server name
+winver # shows windows version
+systeminfo # system information
+get-process # shows running processes
+get-service # shows running services
+restart-computer # restarts computer
+Stop-computer # shutsdown computer
+logoff # Logs off
+Clear-Host # clears powershell screen
+$PSVersionTable
+Get-WindowsFeature
+Install-WindowsFeature FeatureName
+Uninstall-WindowsFeature FeatureName
+######################################
+Server config
+
+sconfig
+
+######################################
+Networking Commands
+###################
+Get-NetIPConfiguration
+Get-NetAdapter
+Get-NetIPAddress
+Get-DnsClientServerAddress
+Get-NetRoute
+######################################
+Configure Static IP
+######################################
+New-NetIPAddress `
+-InterfaceAlias "Ethernet" `
+-IPAdress 192.168.1.10 `
+-PrefixLength 24 `
+-DefaultGateway 192.168.1.1
+######################################
+Confiure DNS
+######################################
+Set-DnsClientServerAddress `
+-InterfaceAlias "Ethernet" `
+-ServerAddresses 192.168.1.10
+######################################
+Test Connectivity
+######################################
+Test-Connection 192.168.1.10
+Test-NetConnection google.com
+Test-NetConnection 192.168.1.10 -Port 53
+ipconfig /all
+ipconfig /flushdns
+ipconfig /registerdns
+######################################
+FireWall
+######################################
+Get-NetFirewallProfile
+Get-NetFirewallRule
+Enable-NetFirewallRule -DisplayGroup " Remote Desktop "
+Disable-NetFirewallRule -DisplayGroup " Remote Desktop"
+######################################
+Import-Module ActiveDirectory
+#####################################
+Get-ADDomain
+Get-ADForest
+Get-ADDomainController -Filter *
+Get-ADDomainController
+Get-ADReplicationSite -Filer *
+Get-ADReplicationSubnet -Filter *
+Get-ADTrust -Filter *
+######################################
+Create Originizational units
+######################################
+
+New-ADOrganizationalUnit
+-Name "IT"
+-Path "DC=Company, DC=local"
+
