@@ -75,3 +75,10 @@ New-ADOrganizationalUnit
 -Name "IT"
 -Path "DC=Company, DC=local"
 
+#List OrganizationalUnit
+
+Get-ADOrganizationalUnit -filer *
+
+#remove an ou
+remove-ADOrginizationalUnit `
+-Identity " OU=IT, DC=company, DC=local"
