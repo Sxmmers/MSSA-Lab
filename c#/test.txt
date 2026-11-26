@@ -1,0 +1,16 @@
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Set-PcsvDeviceUserPassword                         1.0.0.0    PcsvDevice
+Cmdlet          Copy-UserInternationalSettingsToSystem             2.1.0.0    International
+Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Get-WinUserLanguageList                            2.1.0.0    International
+Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          New-WinUserLanguageList                            2.1.0.0    International
+Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Set-WinUserLanguageList                            2.1.0.0    International
+
